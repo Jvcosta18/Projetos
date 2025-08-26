@@ -4,7 +4,10 @@ public class funcionario {
     private String nome;
     private double salario;
 
-
+    public funcionario(String nome, double salario) {
+        this.nome = nome;
+        this.salario = salario;
+    }
 
     public String getNome() {
         return nome;
@@ -21,7 +24,6 @@ public class funcionario {
     public void setSalario(double salario) {
         this.salario = salario;
     }
-
 
 
     public void calcularIRPF() {
@@ -47,8 +49,10 @@ public class funcionario {
                     (4664.68 - 3751.05) * 0.225 +
                     (salario - 4664.68) * 0.275;
         }
-        System.out.printf("O imposto devido é: R$ %.2f%n", imposto);
+        System.out.printf("Imposto de Renda: R$ %.2f%n", imposto);
     }
-        }
+}
+
+
 
 
